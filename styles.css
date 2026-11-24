@@ -95,7 +95,7 @@ input {
 
 .monogram {
   display: block;
-  width: clamp(210px, 46vw, 320px);
+  width: clamp(240px, 52vw, 370px);
   height: auto;
   margin: 0 auto -1rem;
   filter: drop-shadow(0 3px 20px rgba(0, 0, 0, 0.22));
@@ -192,6 +192,13 @@ h1 {
   font-size: 0.75rem;
 }
 
+.rsvp-deadline {
+  margin: 0.9rem 0 0;
+  color: var(--ivory);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+
 .rsvp-dialog {
   position: fixed;
   width: min(92vw, 430px);
@@ -241,44 +248,9 @@ h1 {
   line-height: 1.55;
 }
 
-.rsvp-dialog form {
-  display: grid;
-  gap: 0.55rem;
-  text-align: left;
-}
-
-.rsvp-dialog label {
-  color: var(--navy);
-  font-size: 0.82rem;
-}
-
-.rsvp-dialog input {
-  width: 100%;
-  min-height: 48px;
-  padding: 0.75rem;
-  border: 1px solid rgba(20, 25, 55, 0.25);
-  border-radius: 12px;
-  outline: none;
-  background: #fffdfa;
-  color: var(--navy);
-}
-
-.rsvp-dialog input:focus {
-  border-color: var(--navy);
-  box-shadow: 0 0 0 2px rgba(20, 25, 55, 0.14);
-}
-
-.rsvp-dialog input::placeholder {
-  color: rgba(20, 25, 55, 0.5);
-}
-
 .dialog-submit {
   width: 100%;
   margin-top: 1rem;
-}
-
-.success-view .dialog-copy {
-  margin-bottom: 0.5rem;
 }
 
 @media (max-height: 720px) and (min-width: 600px) {
@@ -287,7 +259,7 @@ h1 {
   }
 
   .monogram {
-    width: 245px;
+    width: 285px;
   }
 
   .wedding-date {
@@ -314,8 +286,8 @@ h1 {
   }
 
   .monogram {
-    width: min(68vw, 270px);
-    margin-bottom: -0.75rem;
+    width: min(76vw, 310px);
+    margin-bottom: -0.85rem;
   }
 
   .countdown {

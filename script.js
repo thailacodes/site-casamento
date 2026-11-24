@@ -1,5 +1,6 @@
 const content = document.querySelector(".content");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const RSVP_WEB_APP_URL = "";
 
 window.setTimeout(
   () => content.classList.add("is-visible"),
@@ -39,14 +40,22 @@ updateCountdown();
 window.setInterval(updateCountdown, 1000);
 
 const dialog = document.querySelector("#rsvp-dialog");
-const form = document.querySelector("#rsvp-form");
-const formView = document.querySelector("#rsvp-form-view");
-const successView = document.querySelector("#rsvp-success");
-const guestName = document.querySelector("#guest-name");
+const invitationMessage = document.querySelector("#rsvp-message");
 
 document.querySelector("#open-rsvp").addEventListener("click", () => {
+  const inviteToken = new URLSearchParams(window.location.search).get("convite");
+
+  if (RSVP_WEB_APP_URL && inviteToken) {
+    const rsvpUrl = new URL(RSVP_WEB_APP_URL);
+    rsvpUrl.searchParams.set("token", inviteToken);
+    window.location.assign(rsvpUrl);
+    return;
+  }
+
+  invitationMessage.textContent = RSVP_WEB_APP_URL
+    ? "Para confirmar, abra o link individual que recebeu junto com o convite."
+    : "A confirmação online está sendo preparada. Você receberá seu link individual para responder.";
   dialog.showModal();
-  guestName.focus();
 });
 
 function closeDialog() {
@@ -55,24 +64,3 @@ function closeDialog() {
 
 document.querySelector("#close-rsvp").addEventListener("click", closeDialog);
 document.querySelector("#finish-rsvp").addEventListener("click", closeDialog);
-
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const name = guestName.value.trim();
-
-  if (!name) {
-    guestName.focus();
-    return;
-  }
-
-  document.querySelector("#success-message").textContent =
-    `${name}, sua presença está confirmada. Será uma alegria celebrar com você!`;
-  formView.hidden = true;
-  successView.hidden = false;
-});
-
-dialog.addEventListener("close", () => {
-  form.reset();
-  formView.hidden = false;
-  successView.hidden = true;
-});

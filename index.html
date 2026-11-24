@@ -33,7 +33,7 @@
           src="assets/logo-thaila-fernando.png"
           alt="Monograma de Thaila e Fernando"
         />
-        <p class="invitation-label">com alegria, convidamos você a</p>
+        <p class="invitation-label">com alegria, convidamos você para celebrar o Sacramento do nosso Matrimônio</p>
         <h1 id="invitation-title">Save the Date</h1>
         <p class="wedding-date">25 <span>/</span> 09 <span>/</span> 2027</p>
 
@@ -62,6 +62,7 @@
         <button class="rsvp-button" id="open-rsvp" type="button">
           Confirmar presença
         </button>
+        <p class="rsvp-deadline">Por favor, confirme até 18/12/2026.</p>
         <p class="closing-note">Será muito especial celebrar com você.</p>
       </section>
     </main>
@@ -75,32 +76,12 @@
       >
         &times;
       </button>
-      <div id="rsvp-form-view">
+      <div>
         <p class="dialog-eyebrow">Thaila &amp; Fernando</p>
-        <h2 id="rsvp-title">Você vem celebrar com a gente?</h2>
-        <p class="dialog-copy">Escreva seu nome para confirmar sua presença.</p>
-        <form id="rsvp-form">
-          <label for="guest-name">Seu nome</label>
-          <input
-            id="guest-name"
-            name="name"
-            type="text"
-            autocomplete="name"
-            maxlength="80"
-            placeholder="Nome e sobrenome"
-            required
-          />
-          <button class="rsvp-button dialog-submit" type="submit">
-            Sim, estarei lá
-          </button>
-        </form>
-      </div>
-      <div class="success-view" id="rsvp-success" hidden>
-        <p class="dialog-eyebrow">Com carinho</p>
-        <h2>Que alegria!</h2>
-        <p id="success-message" class="dialog-copy"></p>
+        <h2 id="rsvp-title">Confirmação pelo convite individual</h2>
+        <p class="dialog-copy" id="rsvp-message"></p>
         <button class="rsvp-button dialog-submit" id="finish-rsvp" type="button">
-          Fechar
+          Entendi
         </button>
       </div>
     </dialog>
