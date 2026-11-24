@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Thaila e Fernando — reserve a data: 25 de setembro de 2027."
+    />
+    <meta name="theme-color" content="#191512" />
+    <title>Thaila &amp; Fernando | Save the Date</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="invitation">
+      <video
+        class="background-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        aria-hidden="true"
+      >
+        <source src="assets/save-the-date-bg.mp4" type="video/mp4" />
+      </video>
+      <div class="backdrop" aria-hidden="true"></div>
+
+      <section class="content" aria-labelledby="invitation-title">
+        <p class="eyebrow">Com a bênção de Deus e de nossas famílias</p>
+        <img
+          class="monogram"
+          src="assets/logo-thaila-fernando.png"
+          alt="Monograma de Thaila e Fernando"
+        />
+        <p class="invitation-label">com alegria, convidamos você a</p>
+        <h1 id="invitation-title">Save the Date</h1>
+        <p class="wedding-date">25 <span>/</span> 09 <span>/</span> 2027</p>
+
+        <div class="countdown" aria-label="Contagem regressiva">
+          <div class="countdown-unit">
+            <span id="days" class="countdown-value">—</span>
+            <span class="countdown-label">dias</span>
+          </div>
+          <span class="countdown-divider" aria-hidden="true"></span>
+          <div class="countdown-unit">
+            <span id="hours" class="countdown-value">—</span>
+            <span class="countdown-label">horas</span>
+          </div>
+          <span class="countdown-divider" aria-hidden="true"></span>
+          <div class="countdown-unit">
+            <span id="minutes" class="countdown-value">—</span>
+            <span class="countdown-label">minutos</span>
+          </div>
+          <span class="countdown-divider" aria-hidden="true"></span>
+          <div class="countdown-unit">
+            <span id="seconds" class="countdown-value">—</span>
+            <span class="countdown-label">segundos</span>
+          </div>
+        </div>
+
+        <button class="rsvp-button" id="open-rsvp" type="button">
+          Confirmar presença
+        </button>
+        <p class="closing-note">Será muito especial celebrar com você.</p>
+      </section>
+    </main>
+
+    <dialog class="rsvp-dialog" id="rsvp-dialog" aria-labelledby="rsvp-title">
+      <button
+        class="close-button"
+        id="close-rsvp"
+        type="button"
+        aria-label="Fechar"
+      >
+        &times;
+      </button>
+      <div id="rsvp-form-view">
+        <p class="dialog-eyebrow">Thaila &amp; Fernando</p>
+        <h2 id="rsvp-title">Você vem celebrar com a gente?</h2>
+        <p class="dialog-copy">Escreva seu nome para confirmar sua presença.</p>
+        <form id="rsvp-form">
+          <label for="guest-name">Seu nome</label>
+          <input
+            id="guest-name"
+            name="name"
+            type="text"
+            autocomplete="name"
+            maxlength="80"
+            placeholder="Nome e sobrenome"
+            required
+          />
+          <button class="rsvp-button dialog-submit" type="submit">
+            Sim, estarei lá
+          </button>
+        </form>
+      </div>
+      <div class="success-view" id="rsvp-success" hidden>
+        <p class="dialog-eyebrow">Com carinho</p>
+        <h2>Que alegria!</h2>
+        <p id="success-message" class="dialog-copy"></p>
+        <button class="rsvp-button dialog-submit" id="finish-rsvp" type="button">
+          Fechar
+        </button>
+      </div>
+    </dialog>
+  </body>
+</html>
