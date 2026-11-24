@@ -9,6 +9,8 @@
     />
     <meta name="theme-color" content="#191512" />
     <title>Thaila &amp; Fernando | Save the Date</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/favicon.png" />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
@@ -76,7 +78,17 @@
       >
         &times;
       </button>
-      <div>
+
+      <div id="rsvp-embed-wrap" hidden>
+        <iframe
+          id="rsvp-frame"
+          title="Confirmação de presença"
+          loading="lazy"
+          style="width: 100%; min-height: 440px; border: 0; background: transparent; display: block;"
+        ></iframe>
+      </div>
+
+      <div id="rsvp-fallback">
         <p class="dialog-eyebrow">Thaila &amp; Fernando</p>
         <h2 id="rsvp-title">Confirmação pelo convite individual</h2>
         <p class="dialog-copy" id="rsvp-message"></p>
