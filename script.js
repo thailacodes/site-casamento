@@ -1,6 +1,6 @@
 const content = document.querySelector(".content");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-const RSVP_WEB_APP_URL = "";
+const RSVP_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyC6RiXnQ8ZnlUFx3zVvtkwqWJnnAphYPylhd0q_B86gFN0y7MT7LleRriBWVzHkbyc/exec";
 
 window.setTimeout(
   () => content.classList.add("is-visible"),
